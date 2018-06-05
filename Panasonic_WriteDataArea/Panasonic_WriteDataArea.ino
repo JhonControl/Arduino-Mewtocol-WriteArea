@@ -124,10 +124,10 @@ int  TramaTam =Trama.length();             // Longitud  Trama  //  Length Frame
 byte tram_arreglo [TramaTam];              //  Array Bytes
 Trama.getBytes(tram_arreglo,TramaTam+1);   // almacena Trama en BYTES Array // Stores Frame in BYTES Array     
 
-byte bcc = 0; 
+byte bcc = tram_arreglo[0]; 
 String BCC;
 
- for (int i=0; i <= (TramaTam - 1); i++){ 
+ for (int i=0; i <= (TramaTam); i++){ 
      bcc ^= tram_arreglo[i];                      /// exclusive or     
  }
 BCC =String(bcc, HEX);          ////// BCC to String    
