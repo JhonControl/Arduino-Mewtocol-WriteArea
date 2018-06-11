@@ -127,7 +127,7 @@ Trama.getBytes(tram_arreglo,TramaTam+1);   // almacena Trama en BYTES Array // S
 byte bcc = tram_arreglo[0]; 
 String BCC;
 
- for (int i=0; i <= (TramaTam); i++){ 
+ for (int i=1; i <= (TramaTam); i++){ 
      bcc ^= tram_arreglo[i];                      /// exclusive or     
  }
 BCC =String(bcc, HEX);          ////// BCC to String    
